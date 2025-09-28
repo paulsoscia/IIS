@@ -27,5 +27,12 @@ TestCOM.aspx (Calling COM DLL )
 	 gobjA = Server.CreateObject("AsS3.General")
 	 gvV3  = gobjA.NewDisbursementPage(gvV1, gvV2) 
 	 Response.Write(gvV3)
+
+     Set Si = Server.CreateObject("AdminServerCommon.StatusItem")
+     'Set gobjGeneral = Server.CreateObject("AdminServerS3.General")
+
+     Si.ErrorDescription = "Test using Si.ErrorDescription --> AdminServerCommon.StatusList"
+     Response.Write(Si.ErrorDescription)
 %>
+
 
